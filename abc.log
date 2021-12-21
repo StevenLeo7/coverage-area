@@ -1,0 +1,21 @@
+
+   ErrorException 
+
+  Undefined property: stdClass::$new_timestamp
+
+  at C:\xampp\htdocs\search_coverage\app\Console\Commands\SummaryInquiry.php:64
+     60▕         // $timestamp_chart=RequestArea::all();
+     61▕ 
+     62▕         foreach ($chart_inquiry as $inquiry) {
+     63▕             $table_chart_inquiry=ChartProvince::create([
+  ➜  64▕                 'timestamp_date' => $inquiry->new_timestamp,
+     65▕                 'request_count' => $inquiry->total_date,
+     66▕             ]);
+     67▕ 
+     68▕             if($table_chart_inquiry){
+
+  1   C:\xampp\htdocs\search_coverage\app\Console\Commands\SummaryInquiry.php:64
+      Illuminate\Foundation\Bootstrap\HandleExceptions::handleError("Undefined property: stdClass::$new_timestamp", "C:\xampp\htdocs\search_coverage\app\Console\Commands\SummaryInquiry.php", [Object(Illuminate\Support\Carbon), Object(Illuminate\Support\Collection), Object(stdClass)])
+
+  2   C:\xampp\htdocs\search_coverage\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:36
+      App\Console\Commands\SummaryInquiry::handle()
